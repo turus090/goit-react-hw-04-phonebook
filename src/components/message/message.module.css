@@ -1,0 +1,16 @@
+
+.message {
+    width: 20%;
+    height: 80px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 21px;
+    background: #F2F7FE;
+    color:#005FEC;
+    border: 1px solid #005FEC;
+    border-radius: 8px;
+}

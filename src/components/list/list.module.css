@@ -1,0 +1,19 @@
+.contactItem{
+    margin: 15px auto;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid rgb(61, 58, 58) ;
+    border-radius: 8px;
+
+}
+
+
+
+.content {
+    width: 70%;
+    display: flex;
+    column-gap: 10px;
+}
