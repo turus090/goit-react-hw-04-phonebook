@@ -9,7 +9,14 @@ import List from "./list/List";
 import s from "./app.module.css";
 import Message from "./message/Message";
 const App = () => {
-  const uploadLocalContacts = () => JSON.parse(localStorage.getItem('contact'))
+  const uploadLocalContacts = () => {
+    if (localStorage.getItem('contact')){
+      return  JSON.parse(localStorage.getItem('contact'))
+    } else {
+      return []
+    }
+   
+  }
     const [contacts, setContacts] = useState(uploadLocalContacts())
     const [filter, setFilter] = useState('')
     
@@ -41,13 +48,10 @@ const App = () => {
         }
       ]))
   }
-  const startSearch = () => {
-    
-        const result = contacts.filter(contactItem => {
-        return contactItem.name.toLowerCase().includes(filter.toLowerCase())
-        })
-        return result
-  }
+  const startSearch = () => (contacts.filter(contactItem => {
+          return contactItem.name.toLowerCase().includes(filter.toLowerCase())
+          })
+        )
 
     return (
       <div>
